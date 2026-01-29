@@ -148,15 +148,15 @@
         }
         
         /* Image Styling */
-	.about-img img {
-   	 width: 350px;      
-   	 height: 350px;
-   	 border-radius: 50%;
-   	 object-fit: cover;
-   	 object-position: top; 
-   	 border: 4px solid var(--accent);
-   	 box-shadow: 0 0 20px rgba(56, 189, 248, 0.3);
-	}
+        .about-img img {
+            width: 350px;       
+            height: 350px;
+            border-radius: 50%;
+            object-fit: cover;
+            object-position: top; 
+            border: 4px solid var(--accent);
+            box-shadow: 0 0 20px rgba(56, 189, 248, 0.3);
+        }
 
         .about-text { max-width: 600px; }
         .about-text p { margin-bottom: 15px; color: var(--text-muted); }
@@ -219,6 +219,9 @@
             border-radius: 12px;
             transition: 0.3s;
             border: 1px solid transparent;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
 
         .project-card:hover {
@@ -230,6 +233,13 @@
         .project-card .tech-stack { font-size: 13px; color: var(--accent); margin-bottom: 15px; font-weight: 500; }
         .project-card p { font-size: 14px; color: var(--text-muted); margin-bottom: 20px; }
         
+        .project-link {
+            color: var(--accent);
+            font-weight: 600;
+            margin-top: auto;
+            display: inline-block;
+        }
+
         /* Contact Section */
         .contact-container {
             display: flex;
@@ -381,33 +391,58 @@
         <div class="projects-grid">
             
             <div class="project-card">
-                <h3>Pharmacy Management System</h3>
-                <p class="tech-stack">C# • .NET WinForms • SQL Server • Guna UI</p>
-                <p>A desktop application for managing pharmacy inventory and sales ("Medicine Ghor").</p>
+                <div>
+                    <h3>Pharmacy Management System</h3>
+                    <p class="tech-stack">C# • .NET WinForms • SQL Server • Guna UI</p>
+                    <p>A desktop application for managing pharmacy inventory and sales ("Medicine Ghor").</p>
+                </div>
+                <a href="https://github.com/sajid-ahmed-khan/Pharmacy-Management-System-Medicine_Ghor-" target="_blank" class="project-link">
+                    View Project <i class="fas fa-arrow-right"></i>
+                </a>
             </div>
 
             <div class="project-card">
-                <h3>Telco Customer Churn Prediction</h3>
-                <p class="tech-stack">Python • Scikit-Learn (SVM) • Pandas</p>
-                <p>Machine learning model to predict customer churn using SVM analysis on telco data.</p>
+                <div>
+                    <h3>Telco Customer Churn Prediction</h3>
+                    <p class="tech-stack">Python • Scikit-Learn (SVM) • Pandas</p>
+                    <p>Machine learning model to predict customer churn using SVM analysis on telco data.</p>
+                </div>
+                <a href="#" class="project-link" onclick="alert('Project coming soon to GitHub!')">
+                    View Project <i class="fas fa-arrow-right"></i>
+                </a>
             </div>
 
             <div class="project-card">
-                <h3>Online Auction API</h3>
-                <p class="tech-stack">ASP.NET Web API • Entity Framework • SQL</p>
-                <p>Backend API service developed for an online auction platform handling user bids and items.</p>
+                <div>
+                    <h3>Online Auction API</h3>
+                    <p class="tech-stack">ASP.NET Web API • Entity Framework • SQL</p>
+                    <p>Backend API service developed for an online auction platform handling user bids and items.</p>
+                </div>
+                <a href="https://github.com/sajid-ahmed-khan/Online-Auction-API" target="_blank" class="project-link">
+                    View Project <i class="fas fa-arrow-right"></i>
+                </a>
             </div>
 
             <div class="project-card">
-                <h3>Event Management System</h3>
-                <p class="tech-stack">Python • FastAPI • REST API</p>
-                <p>Console-based UI coupled with a fast REST API for managing events efficiently.</p>
+                <div>
+                    <h3>Event Management System</h3>
+                    <p class="tech-stack">Python • FastAPI • REST API</p>
+                    <p>Console-based UI coupled with a fast REST API for managing events efficiently.</p>
+                </div>
+                <a href="https://github.com/sajid-ahmed-khan/Event-Mangement-System" target="_blank" class="project-link">
+                    View Project <i class="fas fa-arrow-right"></i>
+                </a>
             </div>
 
             <div class="project-card">
-                <h3>University Management System</h3>
-                <p class="tech-stack">Java • MySQL</p>
-                <p>Comprehensive system for managing university data built with Java.</p>
+                <div>
+                    <h3>University Management System</h3>
+                    <p class="tech-stack">Java • MySQL</p>
+                    <p>Comprehensive system for managing university data built with Java.</p>
+                </div>
+                <a href="#" class="project-link" onclick="alert('Project coming soon to GitHub!')">
+                    View Project <i class="fas fa-arrow-right"></i>
+                </a>
             </div>
 
         </div>
