@@ -180,30 +180,50 @@
         .timeline-item span { font-size: 14px; color: var(--text-muted); display: block; margin-bottom: 15px; }
         .timeline-item p { font-size: 14px; color: var(--text-muted); }
 
-        /* Skills Section */
-        .skills-container {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 15px;
+        /* Updated Skills Section (2-Column Layout) */
+        .skills-wrapper {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 40px;
+            max-width: 900px;
+            margin: 0 auto;
         }
 
-        .skill-tag {
+        .skill-column {
             background: var(--card-bg);
-            padding: 10px 20px;
-            border-radius: 50px;
-            font-size: 14px;
-            border: 1px solid #334155;
-            transition: 0.3s;
+            padding: 30px;
+            border-radius: 12px;
+            border-top: 4px solid var(--accent);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .skill-column h3 {
+            color: #fff;
+            margin-bottom: 20px;
+            font-size: 22px;
+            text-align: left;
+            border-bottom: 1px solid #334155;
+            padding-bottom: 10px;
+        }
+
+        .skill-column ul {
+            list-style: none;
+        }
+
+        .skill-column ul li {
+            margin-bottom: 15px;
+            font-size: 15px;
             display: flex;
             align-items: center;
-            gap: 8px;
+            gap: 12px;
+            color: var(--text-main);
         }
 
-        .skill-tag:hover {
-            border-color: var(--accent);
-            transform: translateY(-3px);
+        .skill-column ul li i {
             color: var(--accent);
+            font-size: 18px;
+            width: 24px;
+            text-align: center;
         }
 
         /* Projects Section */
@@ -275,6 +295,7 @@
             .hero h1 { font-size: 36px; }
             section { padding: 60px 20px; }
             .about-content { flex-direction: column; text-align: center; }
+            .skills-wrapper { grid-template-columns: 1fr; }
         }
     </style>
 </head>
@@ -298,16 +319,20 @@
         <p>Passionate about Python, Machine Learning, and .NET ecosystems. Building scalable software solutions and user-centric web applications.</p>
         
         <div class="btn-group">
-            <a href="#contact" class="btn">Hire Me</a>
-            
-            <a href="https://github.com/sajid-ahmed-khan" target="_blank" class="btn btn-outline">
-                <i class="fab fa-github"></i> GitHub
-            </a>
-            
-            <a href="https://linkedin.com/in/khan-sajid-ahmed" target="_blank" class="btn btn-outline">
-                <i class="fab fa-linkedin"></i> LinkedIn
-            </a>
-        </div>
+    <a href="#contact" class="btn">Hire Me</a>
+    
+    <a href="Sajid CV Resume.pdf" download class="btn btn-outline">
+        <i class="fas fa-download"></i> Download CV
+    </a>
+    
+    <a href="https://github.com/sajid-ahmed-khan" target="_blank" class="btn btn-outline">
+        <i class="fab fa-github"></i> GitHub
+    </a>
+    
+    <a href="https://linkedin.com/in/khan-sajid-ahmed" target="_blank" class="btn btn-outline">
+        <i class="fab fa-linkedin"></i> LinkedIn
+    </a>
+</div>
     </section>
 
     <section id="about">
@@ -371,18 +396,30 @@
 
     <section id="skills" style="background: #162032;">
         <h2 class="section-title">Technical Skills</h2>
-        <div class="skills-container">
-            <div class="skill-tag"><i class="fab fa-python"></i> Python</div>
-            <div class="skill-tag"><i class="fab fa-microsoft"></i> C# / .NET</div>
-            <div class="skill-tag"><i class="fas fa-code"></i> C++</div>
-            <div class="skill-tag"><i class="fab fa-java"></i> Java</div>
-            <div class="skill-tag"><i class="fab fa-react"></i> React / Next.js</div>
-            <div class="skill-tag"><i class="fab fa-node-js"></i> Node.js</div>
-            <div class="skill-tag"><i class="fab fa-php"></i> PHP</div>
-            <div class="skill-tag"><i class="fab fa-html5"></i> HTML & CSS</div>
-            <div class="skill-tag"><i class="fas fa-brain"></i> Machine Learning (SVM)</div>
-            <div class="skill-tag"><i class="fas fa-database"></i> MySQL / Oracle / SQL Server</div>
-            <div class="skill-tag"><i class="fas fa-table"></i> Pandas & NumPy</div>
+        <div class="skills-wrapper">
+            
+            <div class="skill-column">
+                <h3>Core Logic & ML</h3>
+                <ul>
+                    <li><i class="fab fa-python"></i> <strong>Python</strong> (FastAPI, Pandas, NumPy)</li>
+                    <li><i class="fab fa-windows"></i> <strong>C#</strong> (.NET Framework, ASP.NET Web API)</li>
+                    <li><i class="fas fa-brain"></i> <strong>Machine Learning</strong> (Scikit-Learn, SVM, QGNN)</li>
+                    <li><i class="fab fa-js"></i> <strong>JavaScript</strong> (React, Next.js, Node.js)</li>
+                    <li><i class="fas fa-code"></i> <strong>Java & C++</strong></li>
+                </ul>
+            </div>
+
+            <div class="skill-column">
+                <h3>Databases, Web & Tools</h3>
+                <ul>
+                    <li><i class="fas fa-database"></i> <strong>Databases:</strong> SQL Server, MySQL</li>
+                    <li><i class="fas fa-server"></i> <strong>Oracle:</strong> PL/SQL</li>
+                    <li><i class="fas fa-globe"></i> <strong>Web:</strong> HTML, CSS, WordPress</li>
+                    <li><i class="fab fa-git-alt"></i> <strong>Tools:</strong> Git/GitHub, REST API</li>
+                    <li><i class="fas fa-pen-nib"></i> <strong>Design:</strong> UI/UX, Figma</li>
+                </ul>
+            </div>
+
         </div>
     </section>
 
@@ -408,8 +445,8 @@
                     <p>Machine learning model to predict customer churn using SVM analysis on telco data.</p>
                 </div>
                 <a href="https://github.com/sajid-ahmed-khan/Telco-Customer-Churn-Prediction" target="_blank" class="project-link">
-    		View Project <i class="fas fa-arrow-right"></i>
-		</a>
+            View Project <i class="fas fa-arrow-right"></i>
+        </a>
             </div>
 
             <div class="project-card">
